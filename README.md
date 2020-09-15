@@ -4,9 +4,9 @@ malloc, free, write
 
 # Functions
 
-- [ ] memset
-- [ ] bzero
-- [ ] memcpy
+- [x] memset
+- [x] bzero
+- [x] memcpy
 - [ ] memccpy
 - [ ] memmove
 - [ ] memchr
