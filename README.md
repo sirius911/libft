@@ -4,8 +4,6 @@ malloc, free, write
 
 # Functions
 
-10/28
-
 - [ ] memset
 - [ ] bzero
 - [ ] memcpy
@@ -36,8 +34,6 @@ malloc, free, write
 - [ ] tolower
 
 # Additional functions
-
-3/24
 
 - [ ] ft_memalloc
 - [ ] ft_memdel
