@@ -6,27 +6,27 @@ malloc, free, write
 
 10/28
 
-- [x] memset
+- [ ] memset
 - [ ] bzero
 - [ ] memcpy
 - [ ] memccpy
 - [ ] memmove
 - [ ] memchr
 - [ ] memcmp
-- [x] strlen
-- [x] strdup
-- [x] strcpy
-- [x] strncpy
-- [x] strcat
-- [x] strncat
+- [ ] strlen
+- [ ] strdup
+- [ ] strcpy
+- [ ] strncpy
+- [ ] strcat
+- [ ] strncat
 - [ ] strlcat
 - [ ] strchr
 - [ ] strrchr
 - [ ] strstr
 - [ ] strnstr
-- [x] strcmp
-- [x] strncmp
-- [x] atoi
+- [ ] strcmp
+- [ ] strncmp
+- [ ] atoi
 - [ ] isalpha
 - [ ] isdigit
 - [ ] isalnum
@@ -55,10 +55,10 @@ malloc, free, write
 - [ ] ft_strtrim
 - [ ] ft_strsplit
 - [ ] ft_itoa
-- [x] ft_putchar
-- [x] ft_putstr
+- [ ] ft_putchar
+- [ ] ft_putstr
 - [ ] ft_putendl
-- [x] ft_putnbr
+- [ ] ft_putnbr
 - [ ] ft_putchar_fd
 - [ ] ft_putstr_fd
 - [ ] ft_putendl_fd
