@@ -3,12 +3,13 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: clorin <marvin@42.fr>                      +#+  +:+       +#+         #
+#    By: clorin <clorin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/09/11 14:15:29 by clorin            #+#    #+#              #
-#    Updated: 2020/09/15 13:43:27 by clorin           ###   ########.fr        #
+#    Created: 2020/09/15 14:40:58 by clorin            #+#    #+#              #
+#    Updated: 2020/09/15 14:41:03 by clorin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 .phony: all clean fclean re
 
 NAME		= libft.a

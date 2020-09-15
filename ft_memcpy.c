@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clorin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/14 15:11:44 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/14 15:11:48 by clorin           ###   ########.fr       */
+/*   Created: 2020/09/15 14:41:39 by clorin            #+#    #+#             */
+/*   Updated: 2020/09/15 14:44:30 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void		*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t		i;
 	char		*destination;
-	const char		*sources;
+	const char	*sources;
 
 	i = 0;
 	destination = (char *)dest;
