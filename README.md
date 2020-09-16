@@ -12,7 +12,7 @@ malloc, free, write
 - [x] memchr
 - [x] memcmp
 - [x] strlen
-- [ ] strdup
+- [x] strdup
 - [x] strcpy
 - [ ] strncpy
 - [ ] strcat
@@ -35,9 +35,9 @@ malloc, free, write
 
 # Additional functions
 
-- [ ] ft_memalloc
+- [x] ft_memalloc
 - [ ] ft_memdel
-- [ ] ft_strnew
+- [x] ft_strnew
 - [ ] ft_strdel
 - [ ] ft_strclr
 - [ ] ft_striter

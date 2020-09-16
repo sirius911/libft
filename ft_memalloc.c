@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:41:39 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/15 14:44:30 by clorin           ###   ########.fr       */
+/*   Created: 2020/09/16 17:13:04 by clorin            #+#    #+#             */
+/*   Updated: 2020/09/16 17:17:28 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *dest, const void *src, size_t n)
+void		*ft_memalloc(size_t size)
 {
-	size_t		i;
+	void	*ptr;
 
-	i = 0;
-	while (((char *)src)[i] && i < n)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dest);
+	ptr = (void *)malloc(size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, size);
+	return (ptr);
 }

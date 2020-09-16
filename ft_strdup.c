@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:41:39 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/15 14:44:30 by clorin           ###   ########.fr       */
+/*   Created: 2020/09/16 12:52:46 by clorin            #+#    #+#             */
+/*   Updated: 2020/09/16 12:53:00 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memcpy(void *dest, const void *src, size_t n)
+char		*ft_strdup(const char *str)
 {
-	size_t		i;
-
-	i = 0;
-	while (((char *)src)[i] && i < n)
-	{
-		((char *)dest)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dest);
+	char	*dest;
+	
+	dest = ft_strnew(ft_strlen(str));
+	if (!dest)
+		return (NULL);
+	return (ft_strcpy(dest, str));
 }
