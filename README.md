@@ -13,7 +13,7 @@ malloc, free, write
 - [x] memcmp
 - [x] strlen
 - [ ] strdup
-- [ ] strcpy
+- [x] strcpy
 - [ ] strncpy
 - [ ] strcat
 - [ ] strncat

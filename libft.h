@@ -20,7 +20,8 @@
 void		ft_putchar(char c);
 void		ft_putstr(const char *str);
 size_t		ft_strlen(const char *str);
-int			ft_strncmp(const unsigned char *s1, const unsigned char *s2, size_t n);
+char		*ft_strcpy(char *dest, const char *src);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
