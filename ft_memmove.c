@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:41:17 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/15 14:41:19 by clorin           ###   ########.fr       */
+/*   Created: 2020/09/16 08:33:25 by clorin            #+#    #+#             */
+/*   Updated: 2020/09/16 08:43:59 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_bzero(void *s, size_t n)
+void		*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t		i;
-
-	i = 0;
-	while (i < n)
-		((char *)s)[i++] = '\0';
+	if (!dst && !src)
+		return (NULL);
+	if (dst <= src)
+		return (ft_memcpy(dst, src, n));
+	else
+	{
+		while (n > 0)
+		{
+			((char *)dst)[n - 1] = ((char *)src)[n - 1];
+			n--;
+		}
+		return (dst);
+	}
 }

@@ -8,7 +8,7 @@ malloc, free, write
 - [x] bzero
 - [x] memcpy
 - [x] memccpy
-- [ ] memmove
+- [x] memmove
 - [ ] memchr
 - [ ] memcmp
 - [x] strlen
