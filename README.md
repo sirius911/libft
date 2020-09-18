@@ -29,9 +29,9 @@ malloc, free, write
 - [x] isdigit
 - [x] isalnum
 - [x] isascii
-- [ ] isprint
-- [ ] toupper
-- [ ] tolower
+- [x] isprint
+- [x] toupper
+- [x] tolower
 
 # Additional functions
 
