@@ -49,6 +49,6 @@ fclean:		clean
 			
 re:			fclean	all
 
-test:		
-			@${CC} ${HEADER} -L . -O unit_test/main.c  unit_test/unit_test.c -o test -lft
+test:		libft.a
+			@${CC} ${HEADER} -L. -O unit_test/main.c  unit_test/unit_test.c -o test -lft -lbsd
 			@echo "\033[1;33mCompilation test\t\033[0;32m-OK-\033[0m"

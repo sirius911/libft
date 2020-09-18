@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <malloc.h>
-#include <bsd/bsd.h>
+#include <bsd/string.h>
 
 /* Uncomment this if you don't have
 ** Part 2 
@@ -64,6 +64,7 @@ UT_TEST(ft_memccpy)
 	p2 = ft_memccpy(buf2, buf1, 'i', 10);
 	UT_ASSERT_EQ(p1, p2);
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 'k', 5), 0);
+	//printf("%s\n",(char*)ft_memccpy(buf2, buf1, 0, 0));
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 0, 0), memccpy(buf2, buf1, 0, 0));
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 0, sizeof(buf1)), memccpy(buf2, buf1, 0, sizeof(buf1)));
 	UT_ASSERT_EQ(ft_memccpy(buf2, buf1, 'C', 10), buf2 + 1);
