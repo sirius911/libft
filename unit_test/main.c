@@ -164,10 +164,18 @@ UT_TEST(ft_strlcat)
 	bzero(buf, 10);
 	strcpy(buf, "abc");
 	ft_strlcat(buf, "abcdefghijklmnop", 10);
+	//printf("%d\n", ft_strlcat(buf, "abcdefghijklmnop", 10));
+	//printf("<%s>\n", buf);
 	UT_ASSERT_EQ(strcmp(buf, "abcabcdef"), 0);
+	//printf("%d\n", strlcat(buf, "abcd", 2));
+	//printf("%s\n", buf);
 	UT_ASSERT_EQ(ft_strlcat(buf, "abcd", 2), 6);
 	bzero(buf, 10);
+	//printf("%d\n", ft_strlcat(buf, "abc", 10));
+	//printf("%s\n", buf);
 	UT_ASSERT_EQ(ft_strlcat(buf, "abc", 10), 3);
+	//printf("%d\n", ft_strlcat(buf, "def", 10));
+	//printf("%s\n", buf);
 	UT_ASSERT_EQ(ft_strlcat(buf, "def", 10), 6);
 	bzero(buf, 10);
 	memset(buf, 'a', 10);
