@@ -20,8 +20,8 @@ malloc, free, write
 - [x] strlcat
 - [x] strchr
 - [x] strrchr
-- [ ] strstr
-- [ ] strnstr
+- [x] strstr
+- [x] strnstr
 - [ ] strcmp
 - [x] strncmp
 - [ ] atoi
