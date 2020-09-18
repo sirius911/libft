@@ -17,7 +17,7 @@ malloc, free, write
 - [x] strncpy
 - [x] strcat
 - [x] strncat
-- [ ] strlcat
+- [x] strlcat
 - [ ] strchr
 - [ ] strrchr
 - [ ] strstr
