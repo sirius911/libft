@@ -22,7 +22,7 @@ malloc, free, write
 - [x] strrchr
 - [x] strstr
 - [x] strnstr
-- [ ] strcmp
+- [x] strcmp
 - [x] strncmp
 - [ ] atoi
 - [ ] isalpha
