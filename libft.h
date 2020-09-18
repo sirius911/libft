@@ -42,5 +42,10 @@ void		*ft_memalloc(size_t size);
 char		*ft_strnew(size_t size);
 char		*ft_strdup(const char *str);
 int			ft_atoi(const char *str);
+int			ft_isalpha(int ch);
+int			ft_isdigit(int ch);
+int			ft_isalnum(int ch);
+int			ft_isascii(int ch);
+int			ft_isspace(int ch);
 
 #endif

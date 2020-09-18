@@ -25,10 +25,10 @@ malloc, free, write
 - [x] strcmp
 - [x] strncmp
 - [x] atoi
-- [ ] isalpha
-- [ ] isdigit
-- [ ] isalnum
-- [ ] isascii
+- [x] isalpha
+- [x] isdigit
+- [x] isalnum
+- [x] isascii
 - [ ] isprint
 - [ ] toupper
 - [ ] tolower
@@ -79,3 +79,7 @@ malloc, free, write
 - [ ] ft_lstadd
 - [ ] ft_lstiter
 - [ ] ft_lstmap
+
+# Bonus clorin
+
+ - [x] ft_isspace
