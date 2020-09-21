@@ -31,7 +31,6 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 			i++;
 		}
 	}
-	new[i] = 0;
 	return (new);
 }
 
