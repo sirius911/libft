@@ -36,10 +36,10 @@ malloc, free, write
 # Additional functions
 
 - [x] ft_memalloc
-- [ ] ft_memdel
+- [x] ft_memdel
 - [x] ft_strnew
-- [ ] ft_strdel
-- [ ] ft_strclr
+- [x] ft_strdel
+- [x] ft_strclr
 - [ ] ft_striter
 - [ ] ft_striteri
 - [ ] ft_strmap

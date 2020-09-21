@@ -50,5 +50,8 @@ int			ft_isspace(int ch);
 int			ft_isprint(int ch);
 int			ft_toupper(int ch);
 int			ft_tolower(int ch);
+void		ft_memdel(void **ap);
+void		ft_strdel(char **as);
+void		ft_strclr(char *s);
 
 #endif
