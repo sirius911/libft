@@ -41,6 +41,7 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memalloc(size_t size);
 char		*ft_strnew(size_t size);
 char		*ft_strdup(const char *str);
+char		*ft_strndup(const char *s, size_t n);
 int			ft_atoi(const char *str);
 int			ft_isalpha(int ch);
 int			ft_isdigit(int ch);
@@ -62,5 +63,6 @@ int			ft_strnequ(char const *s1, char const *s2, size_t n);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s);
+char		**ft_strsplit(char const *s, char c);
 
 #endif
