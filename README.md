@@ -48,7 +48,7 @@ malloc, free, write
 - [x] ft_strnequ
 - [x] ft_strsub
 - [x] ft_strjoin
-- [ ] ft_strtrim
+- [x] ft_strtrim
 - [ ] ft_strsplit
 - [ ] ft_itoa
 - [x] ft_putchar
