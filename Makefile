@@ -29,7 +29,7 @@ SRCS		= ft_strlen.c ft_putchar.c ft_putstr.c ft_memset.c \
 			ft_isspace.c ft_isprint.c ft_toupper.c ft_tolower.c ft_memdel.c \
 			ft_strdel.c ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c \
 			ft_strmapi.c ft_strequ.c ft_strnequ.c ft_strsub.c ft_strjoin.c \
-			ft_strtrim.c ft_strndup.c ft_strsplit.c
+			ft_strtrim.c ft_strndup.c ft_strsplit.c ft_itoa.c
 
 OBJS		= ${SRCS:.c=.o}
 

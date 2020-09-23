@@ -50,7 +50,7 @@ malloc, free, write
 - [x] ft_strjoin
 - [x] ft_strtrim
 - [x] ft_strsplit
-- [ ] ft_itoa
+- [x] ft_itoa
 - [x] ft_putchar
 - [x] ft_putstr
 - [ ] ft_putendl
