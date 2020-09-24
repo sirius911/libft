@@ -11,7 +11,7 @@
 ** Part 2 
 */
 
-#define NO_PART_2
+/*#define NO_PART_2*/
 
 /*
 ** Same for bonus :
@@ -245,6 +245,7 @@ UT_TEST(ft_strncmp)
 	UT_ASSERT_EQ(ft_strncmp("abc", "abcde", 3), 0);
 	UT_ASSERT_EQ(ft_strncmp("abc", "abc\0defg", 100), 0);
 	UT_ASSERT_NEQ(ft_strncmp("ab\0cde", "abcc\0e", 20), 0);
+	UT_ASSERT_EQ(ft_strncmp("ededeqdf", "", 0),strncmp("ededeqdf", "", 0));
 }
 
 UT_TEST(ft_atoi)
@@ -443,6 +444,7 @@ UT_TEST(ft_strsub)
 
 	str = "Un jour je serai, le meilleur dresseur !";
 	UT_ASSERT_EQ(ft_strsub(str, 0, (size_t)-10), NULL);
+	//printf("<%s>\n", ft_strsub(str, 8, 8));
 	UT_ASSERT_EQ(strcmp(ft_strsub(str, 8, 8), "je serai"), 0);
 	UT_ASSERT_EQ(strcmp(ft_strsub(str, 0, 0), ""), 0);
 }
@@ -479,7 +481,6 @@ UT_TEST(ft_strsplit)
 UT_TEST(ft_itoa)
 {
 	UT_ASSERT_EQ(strcmp(ft_itoa(0), "0"), 0);
-	printf("%s\n" ,ft_itoa(-1234));
 	UT_ASSERT_EQ(strcmp(ft_itoa(-1234), "-1234"), 0);
 	UT_ASSERT_EQ(strcmp(ft_itoa(123456000), "123456000"), 0);
 	UT_ASSERT_EQ(strcmp(ft_itoa(-2147483648), "-2147483648"), 0);
@@ -562,7 +563,7 @@ UT_TEST(ft_putnbr)
 	close(p[0]);
 	close(p[1]);
 	close(out);
-	printf("ceci est ta race %s\n" ,buf);
+	//printf("ceci est ta race %s\n" ,buf);
 	UT_ASSERT_EQ(strcmp(buf, "012300-56-2147483648"), 0);
 }
 
@@ -619,7 +620,7 @@ UT_TEST(ft_putnbr_fd)
 	buf[read(p[0], buf, 100)] = 0;
 	close(p[0]);
 	close(p[1]);
-	printf("ceciewrewer%s\n" ,buf);
+	//printf("ceciewrewer%s\n" ,buf);
 	UT_ASSERT_EQ(strcmp(buf, "056-1230-2147483648"), 0);
 }
 

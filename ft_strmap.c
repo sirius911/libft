@@ -15,6 +15,7 @@
 char		*ft_strmap(char const *s, char (*f)(char))
 {
 	char	*new;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -23,8 +24,9 @@ char		*ft_strmap(char const *s, char (*f)(char))
 		return (NULL);
 	if (f)
 	{
+		i = 0;
 		while (*s)
-			*new++ = (*f)(*s++);
+			new[i++] = (*f)(*s++);
 	}
 	return (new);
 }
