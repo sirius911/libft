@@ -17,6 +17,13 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
 void				ft_putchar(char c);
 void				ft_putstr(const char *str);
 size_t				ft_strlen(const char *str);
@@ -42,6 +49,7 @@ void				*ft_memalloc(size_t size);
 char				*ft_strnew(size_t size);
 char				*ft_strdup(const char *str);
 char				*ft_strndup(const char *s, size_t n);
+void				*ft_memdup(const void *src, size_t size);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int ch);
 int					ft_isdigit(int ch);
@@ -71,12 +79,6 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 #endif

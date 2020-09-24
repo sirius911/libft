@@ -71,9 +71,9 @@ malloc, free, write
 `	struct s_list *next;`  
 `} t_list;`
 
-0/6
+1/6
 
-- [ ] ft_lstnew
+- [x] ft_lstnew
 - [ ] ft_lstdelone
 - [ ] ft_lstdel
 - [ ] ft_lstadd
@@ -84,3 +84,4 @@ malloc, free, write
 
  - [x] ft_isspace
  - [x] ft_strndup
+ - [x] ft_memdup

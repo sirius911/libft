@@ -17,7 +17,7 @@
 ** Same for bonus :
 */
 
-#define NO_BONUS 
+//#define NO_BONUS 
 
 
 UT_TEST(ft_memset)
@@ -625,7 +625,7 @@ UT_TEST(ft_putnbr_fd)
 }
 
 #endif
-/*
+
 #ifndef NO_BONUS
 
 UT_TEST(ft_lstnew)
@@ -640,106 +640,106 @@ UT_TEST(ft_lstnew)
 	UT_ASSERT_EQ((list->content_size), 0);
 }
 
-int		____diddel;
+// int		____diddel;
 
-void	del_test(void *data, size_t i)
-{
-	(void)data;
-	(void)i;
-	____diddel++;
-}
+// void	del_test(void *data, size_t i)
+// {
+// 	(void)data;
+// 	(void)i;
+// 	____diddel++;
+// }
 
-UT_TEST(ft_lstdelone)
-{
-	t_list	*list;
-	int		ft;
+// UT_TEST(ft_lstdelone)
+// {
+// 	t_list	*list;
+// 	int		ft;
 
-	____diddel = 0;
-	ft = 42;
-	list = (t_list *)malloc(sizeof(t_list));
-	list->content = &ft;
-	list->content_size = sizeof(int);
-	ft_lstdelone(&list, del_test);
-	UT_ASSERT_EQ(list, NULL);
-	UT_ASSERT_EQ(____diddel, 1);
-}
+// 	____diddel = 0;
+// 	ft = 42;
+// 	list = (t_list *)malloc(sizeof(t_list));
+// 	list->content = &ft;
+// 	list->content_size = sizeof(int);
+// 	ft_lstdelone(&list, del_test);
+// 	UT_ASSERT_EQ(list, NULL);
+// 	UT_ASSERT_EQ(____diddel, 1);
+// }
 
-UT_TEST(ft_lstdel)
-{
-	t_list	*list;
-	int		ft;
+// UT_TEST(ft_lstdel)
+// {
+// 	t_list	*list;
+// 	int		ft;
 
-	ft = 42;
-	____diddel = 0;
-	list = malloc(sizeof(t_list));
-	bzero(list, sizeof(t_list));
-	list->next = malloc(sizeof(t_list));
-	bzero(list->next, sizeof(t_list));
-	list->content = &ft;
-	list->next->content = (&ft) + 1;
-	ft_lstdel(&list, del_test);
-	UT_ASSERT_EQ(list, NULL);
-	UT_ASSERT_EQ(____diddel, 2);
-}
+// 	ft = 42;
+// 	____diddel = 0;
+// 	list = malloc(sizeof(t_list));
+// 	bzero(list, sizeof(t_list));
+// 	list->next = malloc(sizeof(t_list));
+// 	bzero(list->next, sizeof(t_list));
+// 	list->content = &ft;
+// 	list->next->content = (&ft) + 1;
+// 	ft_lstdel(&list, del_test);
+// 	UT_ASSERT_EQ(list, NULL);
+// 	UT_ASSERT_EQ(____diddel, 2);
+// }
 
-UT_TEST(ft_lstadd)
-{
-	t_list	*list;
-	t_list	*list2;
+// UT_TEST(ft_lstadd)
+// {
+// 	t_list	*list;
+// 	t_list	*list2;
 
-	list = malloc(sizeof(t_list));
-	list2 = malloc(sizeof(t_list));
-	bzero(list, sizeof(t_list));
-	bzero(list2, sizeof(t_list));
-	ft_lstadd(&list2, list);
-	UT_ASSERT_EQ(list, list2);
-	UT_ASSERT_NEQ(list->next, NULL);
-}
+// 	list = malloc(sizeof(t_list));
+// 	list2 = malloc(sizeof(t_list));
+// 	bzero(list, sizeof(t_list));
+// 	bzero(list2, sizeof(t_list));
+// 	ft_lstadd(&list2, list);
+// 	UT_ASSERT_EQ(list, list2);
+// 	UT_ASSERT_NEQ(list->next, NULL);
+// }
 
-void	lstiter_test(t_list *ppp)
-{
-	ppp->content_size = 42;
-}
+// void	lstiter_test(t_list *ppp)
+// {
+// 	ppp->content_size = 42;
+// }
 
-UT_TEST(ft_lstiter)
-{
-	t_list	*list;
+// UT_TEST(ft_lstiter)
+// {
+// 	t_list	*list;
 
-	bzero((list = malloc(sizeof(t_list))), sizeof(t_list));
-	bzero(((list->next) = malloc(sizeof(t_list))), sizeof(t_list));
-	ft_lstiter(list, lstiter_test);
-	UT_ASSERT_EQ(list->content_size, 42);
-	UT_ASSERT_EQ(list->next->content_size, 42);
-}
+// 	bzero((list = malloc(sizeof(t_list))), sizeof(t_list));
+// 	bzero(((list->next) = malloc(sizeof(t_list))), sizeof(t_list));
+// 	ft_lstiter(list, lstiter_test);
+// 	UT_ASSERT_EQ(list->content_size, 42);
+// 	UT_ASSERT_EQ(list->next->content_size, 42);
+// }
 
-t_list	*lstmap_test(t_list *list)
-{
-	t_list	*l2;
+// t_list	*lstmap_test(t_list *list)
+// {
+// 	t_list	*l2;
 
-	l2 = malloc(sizeof(t_list));
-	bzero(l2, sizeof(t_list));
-	l2->content_size = list->content_size * 2;
-	return (l2);
-}
+// 	l2 = malloc(sizeof(t_list));
+// 	bzero(l2, sizeof(t_list));
+// 	l2->content_size = list->content_size * 2;
+// 	return (l2);
+// }
 
-UT_TEST(ft_lstmap)
-{
-	t_list	*list;
-	t_list	*map;
+// UT_TEST(ft_lstmap)
+// {
+// 	t_list	*list;
+// 	t_list	*map;
 
-	bzero((list = malloc(sizeof(t_list))), sizeof(t_list));
-	bzero((list->next = malloc(sizeof(t_list))), sizeof(t_list));
-	list->content_size = 21;
-	list->next->content_size = 100;
-	map = ft_lstmap(list, lstmap_test);
-	UT_ASSERT_EQ(list->content_size, 21);
-	UT_ASSERT_EQ(list->next->content_size, 100);
-	UT_ASSERT_EQ(map->content_size, 42);
-	UT_ASSERT_EQ(map->next->content_size, 200);
-}
+// 	bzero((list = malloc(sizeof(t_list))), sizeof(t_list));
+// 	bzero((list->next = malloc(sizeof(t_list))), sizeof(t_list));
+// 	list->content_size = 21;
+// 	list->next->content_size = 100;
+// 	map = ft_lstmap(list, lstmap_test);
+// 	UT_ASSERT_EQ(list->content_size, 21);
+// 	UT_ASSERT_EQ(list->next->content_size, 100);
+// 	UT_ASSERT_EQ(map->content_size, 42);
+// 	UT_ASSERT_EQ(map->next->content_size, 200);
+// }
 
 #endif
-*/
+
 int	main(void)
 {
 	UT_ADD_TEST(ft_memset);
@@ -796,14 +796,14 @@ int	main(void)
 	UT_ADD_TEST(ft_putendl_fd);
 	UT_ADD_TEST(ft_putnbr_fd);
 #endif
-/*#ifndef	NO_BONUS
-//	UT_ADD_TEST(ft_lstnew);
+#ifndef	NO_BONUS
+	UT_ADD_TEST(ft_lstnew);
 //	UT_ADD_TEST(ft_lstdelone);
 //	UT_ADD_TEST(ft_lstdel);
 //	UT_ADD_TEST(ft_lstadd);
 //	UT_ADD_TEST(ft_lstiter);
 //	UT_ADD_TEST(ft_lstmap);
-//#endif*/
+#endif
 	UT_RUN_ALL_TESTS();
  
 	return (0);
