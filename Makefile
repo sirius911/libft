@@ -36,7 +36,7 @@ SRCS		= ft_strlen.c ft_putchar.c ft_putstr.c ft_memset.c \
 OBJS		= ${SRCS:.c=.o}
 
 .c.o:
-			${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
+			@${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
 			ar rc ${NAME} ${OBJS}
@@ -57,3 +57,6 @@ re:			fclean	all
 test:		libft.a
 			@${CC} ${HEADER} -L. -O unit_test/main.c  unit_test/unit_test.c -o test -lft -lbsd
 			@echo "\033[1;33mCompilation test\t\033[0;32m-OK-\033[0m"
+
+so:			
+			gcc -o libft.so -shared *.o

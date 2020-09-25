@@ -85,3 +85,4 @@ malloc, free, write
  - [x] ft_isspace
  - [x] ft_strndup
  - [x] ft_memdup
+ - [ ] ft_lst_strsplit
