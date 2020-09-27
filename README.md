@@ -76,9 +76,9 @@ malloc, free, write
 - [x] ft_lstnew
 - [x] ft_lstdelone
 - [x] ft_lstdel
-- [ ] ft_lstadd
-- [ ] ft_lstiter
-- [ ] ft_lstmap
+- [x] ft_lstadd
+- [x] ft_lstiter
+- [x] ft_lstmap
 
 # Bonus clorin
 
