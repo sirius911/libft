@@ -53,10 +53,7 @@ char			**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-		{
-			dest[y] = ft_strndup(s + j, i - j);
-			y++;
-		}
+			dest[y++] = ft_strndup(s + j, i - j);
 	}
 	dest[y] = NULL;
 	return (dest);
