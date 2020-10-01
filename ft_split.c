@@ -40,6 +40,8 @@ char			**ft_split(char const *s, char c)
 
 	i = 0;
 	y = 0;
+	if (!s)
+		return (NULL);
 	dest = (char **)malloc(sizeof(char *) * (nb_word(s, c) + 1));
 	if (!dest)
 		return (NULL);
