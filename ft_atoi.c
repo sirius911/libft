@@ -12,25 +12,57 @@
 
 #include "libft.h"
 
+static int	ft_toobig(int sign, int i, const char *str)
+{
+	int	nb;
+
+	nb = 0;
+	while (str[i++] == '9')
+		nb++;
+	if (nb >= 19 && sign == 1)
+		return (-1);
+	else if ( nb >= 19 && sign == -1)
+		return (0);
+	i -= nb;
+	nb = 0;
+	while ( ft_isdigit(str[i++]))
+		nb++;
+	if (nb > 19 && sign == 1)
+		return (-1);
+	else if (nb > 19 && sign == -1)
+		return (0);
+	return (1);
+}
+
 int		ft_atoi(const char *str)
 {
 	long	result;
-	long	sign;
+	int	sign;
+	int	i;
 
 	result = 0;
-	sign = 1;
-	while (ft_isspace((int)*str))
-		str++;
-	if (*str == '+' || *str == '-')
+	sign = 0;
+	i = 0;
+	while (ft_isspace((int)str[i]))
+		i++;
+	while (str[i] == '+' || str[i] == '-')
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
+		if (str[i] == '-')
+			sign++;
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
+	if (sign > 1)
+		return (0);
+	sign = (sign)? -1 : 1;
+	if ((result = ft_toobig(sign, i, str)) == 1)
 	{
-		result = (result * 10) + *str - '0';
-		str++;
+		result = 0;
+		while (ft_isdigit(str[i]))
+		{
+			result = (result * 10) + str[i] - '0';
+			i++;
+		}
+		result = ((int)(sign * result));
 	}
-	return ((int)(sign * result));
+	return (result);
 }
