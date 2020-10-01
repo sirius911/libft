@@ -39,9 +39,11 @@ int		ft_atoi(const char *str)
 	long	result;
 	int	sign;
 	int	i;
+	int	nb_sign;
 
 	result = 0;
 	sign = 0;
+	nb_sign = 0;
 	i = 0;
 	while (ft_isspace((int)str[i]))
 		i++;
@@ -49,9 +51,10 @@ int		ft_atoi(const char *str)
 	{
 		if (str[i] == '-')
 			sign++;
+		nb_sign++;
 		i++;
 	}
-	if (sign > 1)
+	if (nb_sign > 1)
 		return (0);
 	sign = (sign)? -1 : 1;
 	if ((result = ft_toobig(sign, i, str)) == 1)
