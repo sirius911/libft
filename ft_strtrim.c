@@ -28,5 +28,5 @@ char		*ft_strtrim(char const *s)
 		max--;
 	if (min == max)
 		return (ft_strnew(1));
-	return (ft_strsub(s, min, (max - min)));
+	return (ft_substr(s, min, (max - min)));
 }

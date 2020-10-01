@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -31,7 +31,7 @@ static int		nb_word(char const *str, char c)
 	return (cmpt);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char		**dest;
 	int			i;
