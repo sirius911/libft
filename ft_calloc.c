@@ -16,7 +16,7 @@ void		*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (size <= 0 || count <=0)
+	if (size <= 0 || count <= 0)
 		return (NULL);
 	ptr = ft_memalloc(size * size);
 	return (ptr);
