@@ -32,7 +32,7 @@ SRCS		= ft_strlen.c ft_putchar.c ft_putstr.c ft_memset.c \
 			ft_strtrim.c ft_strndup.c ft_split.c ft_itoa.c ft_putendl.c \
 			ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_lstnew.c ft_memdup.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
-			ft_lstiter.c ft_lstmap.c ft_strlcpy.c
+			ft_lstiter.c ft_lstmap.c ft_strlcpy.c ft_calloc.c
 
 OBJS		= ${SRCS:.c=.o}
 

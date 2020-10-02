@@ -60,6 +60,7 @@ malloc, free, write
 - [x] ft_putstr_fd
 - [x] ft_putendl_fd
 - [x] ft_putnbr_fd
+- [x] ft_calloc
 
 # Bonus Functions
 
