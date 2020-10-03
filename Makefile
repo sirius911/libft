@@ -33,8 +33,9 @@ SRCS		= ft_strlen.c ft_putchar.c ft_putstr.c ft_memset.c \
 			ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			ft_memdup.c ft_strlcpy.c ft_calloc.c
 
-BONUS		 = ft_lstnew.c ft_lstdelone.c ft_lstadd_front.c \
-			ft_lstiter.c ft_lstmap.c ft_lstsplit.c
+BONUS		 = ft_lstnew.c ft_lstdelone.c ft_lstadd_front.c ft_lstclear.c \
+			ft_lstiter.c ft_lstmap.c ft_lstsplit.c ft_lstlast.c \
+			ft_lstsize.c ft_lstadd_back.c
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -64,11 +65,11 @@ ${NAME}:	${OBJS}
 bonus:		${OBJS} ${OBJS_BONUS}
 			@echo "----------- \033[32m Avec Bonus Terminé\033[0m -----------"
 			@echo "\n\033[32m"
-			@echo "██      ██ ██████  ███████ ████████"
-			@echo "██      ██ ██   ██ ██         ██   "
-			@echo "██      ██ ██████  █████      ██   " 
-			@echo "██      ██ ██   ██ ██         ██   "
-			@echo "███████ ██ ██████  ██         ██   " 
+			@echo "██      ██ ██████  ███████ ████████     ██████   ██████  ███    ██ ██    ██ ███████ "
+			@echo "██      ██ ██   ██ ██         ██        ██   ██ ██    ██ ████   ██ ██    ██ ██      "
+			@echo "██      ██ ██████  █████      ██        ██████  ██    ██ ██ ██  ██ ██    ██ ███████ " 
+			@echo "██      ██ ██   ██ ██         ██        ██   ██ ██    ██ ██  ██ ██ ██    ██      ██ "
+			@echo "███████ ██ ██████  ██         ██        ██████   ██████  ██   ████  ██████  ███████ " 
 			@ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
 			@echo "\033[0m\nCréation de la librairie avec les Bonus... \033[32mok\033[0m"
 			@ranlib ${NAME}

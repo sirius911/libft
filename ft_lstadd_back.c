@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 15:18:19 by clorin            #+#    #+#             */
-/*   Updated: 2020/10/02 15:18:24 by clorin           ###   ########.fr       */
+/*   Created: 2020/10/03 15:07:14 by clorin            #+#    #+#             */
+/*   Updated: 2020/10/03 15:07:26 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lstsplit(char const *s, char c)
+void		ft_lstadd_back(t_list **alst, t_list *new)
 {
-	t_list		*dest;
-	char		**tab;
+	t_list		*list;
 
-	dest = NULL;
-	tab = ft_split(s, c);
-	if (tab)
+	if (!alst || !*alst)
 	{
-		while (*tab)
-		{
-			ft_lstadd_back(&dest, ft_lstnew(*tab));
-			tab++;
-		}
+		*alst = new;
 	}
-	return (dest);
+	else
+	{
+		list = ft_lstlast(*alst);
+		list->next = new;
+	}
 }

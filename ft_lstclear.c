@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsplit.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 15:18:19 by clorin            #+#    #+#             */
-/*   Updated: 2020/10/02 15:18:24 by clorin           ###   ########.fr       */
+/*   Created: 2020/10/03 15:30:51 by clorin            #+#    #+#             */
+/*   Updated: 2020/10/03 15:31:01 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list			*ft_lstsplit(char const *s, char c)
+void		ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list		*dest;
-	char		**tab;
+	t_list		*ptr_list;
+	t_list		*ptr_next;
 
-	dest = NULL;
-	tab = ft_split(s, c);
-	if (tab)
+	ptr_list = *lst;
+	while (ptr_list)
 	{
-		while (*tab)
-		{
-			ft_lstadd_back(&dest, ft_lstnew(*tab));
-			tab++;
-		}
+		ptr_next = ptr_list->next;
+		(*del)(ptr_list->content);
+		free(ptr_list);
+		ptr_list = ptr_next;
 	}
-	return (dest);
+	*lst = NULL;
 }

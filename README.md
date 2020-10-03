@@ -9,7 +9,7 @@ Ce projet est également pour vous l’occasion d’étendre la liste des foncti
 
 # Part 1
 
-### Allowed Functions
+### Fonctions autorisées
 
 malloc, free, write
 
@@ -86,14 +86,13 @@ malloc, free, write
 
 - [x] ft_lstnew
 - [x] ft_lstadd_front
-- [ ] ft_lstsize
-- [ ] ft_lstlast
-- [ ] ft_lstadd_back
+- [x] ft_lstsize
+- [x] ft_lstlast
+- [x] ft_lstadd_back
 - [x] ft_lstdelone
-- [ ] ft_lstclear
+- [x] ft_lstclear
 - [x] ft_lstiter
 - [x] ft_lstmap
-- ~~[x] ft_lstdel~~
 
 ---------------------------------
 
@@ -102,4 +101,4 @@ malloc, free, write
  - [x] ft_isspace
  - [x] ft_strndup
  - [x] ft_memdup
- - [ ] ft_lstsplit
+ - [x] ft_lstsplit
