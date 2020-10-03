@@ -1,5 +1,5 @@
-Ma Libft
-========
+<center>Ma Libft
+========</center>
 
 # Part 1
 
@@ -87,7 +87,7 @@ malloc, free, write
 - [ ] ft_lstclear
 - [x] ft_lstiter
 - [x] ft_lstmap
-- [x] ft_lstdel
+- ~~[x] ft_lstdel~~
 
 ---------------------------------
 
