@@ -1,8 +1,11 @@
-## Allowed Functions
+Ma Libft
+========
+
+# Part 1
+
+### Allowed Functions
 
 malloc, free, write
-
-# Functions
 
 - [x] memset
 - [x] bzero
@@ -12,20 +15,6 @@ malloc, free, write
 - [x] memchr
 - [x] memcmp
 - [x] strlen
-- [x] strdup
-- [x] strcpy
-- [x] strncpy
-- [x] strcat
-- [x] strncat
-- [x] strlcat
-- [ ] strlcpy
-- [x] strchr
-- [x] strrchr
-- [x] strstr
-- [x] strnstr
-- [x] strcmp
-- [x] strncmp
-- [x] atoi
 - [x] isalpha
 - [x] isdigit
 - [x] isalnum
@@ -33,9 +22,37 @@ malloc, free, write
 - [x] isprint
 - [x] toupper
 - [x] tolower
+- [x] strchr
+- [x] strrchr
+- [x] strncmp
+- [x] strlcpy
+- [x] strlcat
+- [x] strnstr
+- [x] atoi
+- [x] strdup
+- [x] ft_calloc
 
-# Additional functions
+# Part 2
 
+- [x] ft_substr
+- [x] ft_strjoin
+- [x] ft_strtrim
+- [x] ft_split
+- [x] ft_itoa
+- [x] ft_strmapi
+- [x] ft_putchar_fd
+- [x] ft_putstr_fd
+- [x] ft_putendl_fd
+- [x] ft_putnbr_fd
+
+## Fonctions non spécifiées
+
+- [x] strcpy
+- [x] strncpy
+- [x] strcat
+- [x] strncat
+- [x] strstr
+- [x] strcmp
 - [x] ft_memalloc
 - [x] ft_memdel
 - [x] ft_strnew
@@ -44,47 +61,39 @@ malloc, free, write
 - [x] ft_striter
 - [x] ft_striteri
 - [x] ft_strmap
-- [x] ft_strmapi
 - [x] ft_strequ
 - [x] ft_strnequ
-- [x] ft_strsub
-- [x] ft_strjoin
-- [x] ft_strtrim
-- [x] ft_strsplit
-- [x] ft_itoa
 - [x] ft_putchar
 - [x] ft_putstr
 - [x] ft_putendl
 - [x] ft_putnbr
-- [x] ft_putchar_fd
-- [x] ft_putstr_fd
-- [x] ft_putendl_fd
-- [x] ft_putnbr_fd
-- [x] ft_calloc
 
-# Bonus Functions
+# Partie Bonus
 
 ## Structure
 
 `typedef struct s_list`  
 `{`  
 `	void *content;`  
-`	size_t content_size;`  
 `	struct s_list *next;`  
 `} t_list;`
 
-1/6
-
 - [x] ft_lstnew
+- [x] ft_lstadd_front
+- [ ] ft_lstsize
+- [ ] ft_lstlast
+- [ ] ft_lstadd_back
 - [x] ft_lstdelone
-- [x] ft_lstdel
-- [x] ft_lstadd
+- [ ] ft_lstclear
 - [x] ft_lstiter
 - [x] ft_lstmap
+- [x] ft_lstdel
+
+---------------------------------
 
 # Bonus clorin
 
  - [x] ft_isspace
  - [x] ft_strndup
  - [x] ft_memdup
- - [ ] ft_lst_strsplit
+ - [ ] ft_lstsplit
