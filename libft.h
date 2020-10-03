@@ -80,7 +80,7 @@ void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void *content);
-void				ft_lstdelone(t_list **alist, void (*del)(void *));
+void				ft_lstdelone(t_list *alist, void (*del)(void *));
 void				ft_lstadd_front(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem), void (*del)(void *));
