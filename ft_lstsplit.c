@@ -23,7 +23,7 @@ t_list			*ft_lstsplit(char const *s, char c)
 	{
 		while (*tab)
 		{
-			ft_lstadd_front(&dest, ft_lstnew(*tab, ft_strlen(*tab) + 1));
+			ft_lstadd_front(&dest, ft_lstnew(*tab));
 			tab++;
 		}
 	}
