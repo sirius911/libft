@@ -1,5 +1,4 @@
-<center>Ma Libft
-========</center>
+<center># Ma Libft</center>
 
 # Part 1
 
