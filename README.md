@@ -1,4 +1,4 @@
-# <center>Ma Libft</center>
+<center><h1>Ma Libft</h1></center>
 
 # Part 1
 
