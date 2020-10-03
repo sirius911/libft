@@ -1,4 +1,11 @@
-<center><h1>Ma Libft</h1></center>
+Ma Libft
+========
+Ce projet est également pour vous l’occasion d’étendre la liste des fonctions demandées avec les vôtres et ainsi de rendre votre bibliothèque encore plus utile. N’hésitez pas à compléter votre libft tout au long de votre scolarité une fois que ce projet ne sera plus qu’un souvenir pour vous.
+
+| :---------------|:-------------|
+|Nom du programme |libft.a |
+|Fichiers de rendu | \*.c, libft.h, Makefile |
+|Description | Écrivez votre propre librairie, contenant un extrait des fonctions nécessaires à la suite de votre cursus.| 
 
 # Part 1
 
