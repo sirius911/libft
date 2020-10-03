@@ -19,7 +19,7 @@ t_list			*ft_lstsplit(char const *s, char c)
 
 	dest = NULL;
 	tab = ft_split(s, c);
-	if(tab)
+	if (tab)
 	{
 		while (*tab)
 		{
