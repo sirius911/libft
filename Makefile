@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-.phony: all clean fclean re
+.phony: all clean fclean re bonus
 
 NAME		= libft.a
 
@@ -31,28 +31,64 @@ SRCS		= ft_strlen.c ft_putchar.c ft_putstr.c ft_memset.c \
 			ft_strmapi.c ft_strequ.c ft_strnequ.c ft_substr.c ft_strjoin.c \
 			ft_strtrim.c ft_strndup.c ft_split.c ft_itoa.c ft_putendl.c \
 			ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-			ft_lstnew.c ft_memdup.c ft_lstdelone.c ft_lstdel.c ft_lstadd_front.c \
-			ft_lstiter.c ft_lstmap.c ft_strlcpy.c ft_calloc.c \
-			ft_lstsplit.c
+			ft_memdup.c ft_strlcpy.c ft_calloc.c
+
+BONUS		 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd_front.c \
+			ft_lstiter.c ft_lstmap.c ft_lstsplit.c
 
 OBJS		= ${SRCS:.c=.o}
 
+OBJS_BONUS	= ${BONUS:.c=.o}
+
 .c.o:
 			@${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
-
-${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
-			ranlib ${NAME}
-			@echo "\033[1;31;40m -------------- OK ---------------\033[0m"
+			@echo "compilation : "$< "\033[32mok\033[0m"
 
 all:		${NAME}
 
+${NAME}:	${OBJS}
+			@echo "----------- \033[32mTerminé\033[0m -----------"
+			@echo "\n\033[32m"
+			@echo "██      ██ ██████  ███████ ████████"
+			@echo "██      ██ ██   ██ ██         ██   "
+			@echo "██      ██ ██████  █████      ██   " 
+			@echo "██      ██ ██   ██ ██         ██   "
+			@echo "███████ ██ ██████  ██         ██   " 
+			
+			@ar rc ${NAME} ${OBJS}
+			@echo "\033[0m\nCréation de la librairie ... \033[32mok\033[0m"
+			@ranlib ${NAME}
+			@echo "Optimisation ... \033[32mok\033[0m"
+			@echo "\033[1;31;40m -------------- TERMINÉ ---------------\033[0m"
+
+bonus:		${OBJS} ${OBJS_BONUS}
+			@echo "----------- \033[32m Avec Bonus Terminé\033[0m -----------"
+			@echo "\n\033[32m"
+			@echo "██      ██ ██████  ███████ ████████"
+			@echo "██      ██ ██   ██ ██         ██   "
+			@echo "██      ██ ██████  █████      ██   " 
+			@echo "██      ██ ██   ██ ██         ██   "
+			@echo "███████ ██ ██████  ██         ██   " 
+			@ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
+			@echo "\033[0m\nCréation de la librairie avec les Bonus... \033[32mok\033[0m"
+			@ranlib ${NAME}
+			@echo "Optimisation ... \033[32mok\033[0m"
+			@echo "\033[1;31;40m -------------- TERMINÉ ---------------\033[0m"
+
 clean:	
-			rm -f ${OBJS}
+			@rm -f ${OBJS} ${OBJS_BONUS}
+			@echo "\n\033[32m"
+			@echo " ██████ ██      ███████  █████  ███    ██"
+			@echo "██      ██      ██      ██   ██ ████   ██"
+			@echo "██      ██      █████   ███████ ██ ██  ██"
+			@echo "██      ██      ██      ██   ██ ██  ██ ██"
+			@echo " ██████ ███████ ███████ ██   ██ ██   ████"
+			@echo "\033[0m\nSuppression fichiers *.o  ... \033[32mok\033[0m"
 
 fclean:		clean
-			rm -f ${NAME}
-			rm -f test
+			@rm -f ${NAME}
+			@echo "\033[0mSuppression "${NAME}" ... \033[32mok\033[0m"
+			@rm -f test
 			
 re:			fclean	all
 
