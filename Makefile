@@ -14,7 +14,7 @@
 
 NAME		= libft.a
 
-CC		= gcc
+CC			= gcc
 
 CFLAGS		= -Wall -Wextra -Werror
 
@@ -47,7 +47,7 @@ OBJS_BONUS	= ${BONUS:.c=.o}
 
 all:		${NAME}
 
-${NAME}:	${OBJS}
+$(NAME):	${OBJS}
 			@echo "----------- \033[32mTerminé\033[0m -----------"
 			@echo "\n\033[32m"
 			@echo "██      ██ ██████  ███████ ████████"
