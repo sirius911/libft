@@ -102,3 +102,4 @@ malloc, free, write
  - [x] ft_strndup
  - [x] ft_memdup
  - [x] ft_lstsplit
+ - [x] ft_putnchar
