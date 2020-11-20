@@ -12,6 +12,24 @@
 
 #include "libft.h"
 
+static char		*ft_strndup_split(const char *s, size_t n)
+{
+	char	*str;
+	size_t		i;
+
+	i = 0;
+	str = (char *)malloc(sizeof(char) * n + 1);
+	if (!str)
+		return (NULL);
+	ft_bzero(str, n + 1);
+	while (s[i] && i < n)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	return (str);
+}
+
 static int		nb_word(char const *str, char c)
 {
 	size_t		i;
@@ -31,20 +49,14 @@ static int		nb_word(char const *str, char c)
 	return (cmpt);
 }
 
-char			**ft_split(char const *s, char c)
+static char		**ft_fill_words(char **dest, char const *s, char c)
 {
-	char		**dest;
 	int			i;
 	int			y;
 	int			j;
 
 	i = 0;
 	y = 0;
-	if (!s)
-		return (NULL);
-	dest = (char **)malloc(sizeof(char *) * (nb_word(s, c) + 1));
-	if (!dest)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] == c)
@@ -53,8 +65,31 @@ char			**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > j)
-			dest[y++] = ft_strndup(s + j, i - j);
+		{
+			dest[y] = ft_strndup_split(s + j, i - j);
+			if (!dest[y])
+			{
+				y--;
+				while (y >= 0)
+					free(dest[y--]);
+				free(dest);
+				return (NULL);
+			}
+			y++;
+		}
 	}
 	dest[y] = NULL;
 	return (dest);
+}
+
+char			**ft_split(char const *s, char c)
+{
+	char		**dest;
+
+	if (!s)
+		return (NULL);
+	dest = (char **)malloc(sizeof(char *) * (nb_word(s, c) + 1));
+	if (!dest)
+		return (NULL);
+	return (ft_fill_words(dest, s, c));
 }

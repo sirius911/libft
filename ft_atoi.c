@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+static int	ft_isspace_atoi(int ch)
+{
+	if (ch == '\t' || ch == '\n' || ch == '\v' ||
+		ch == '\f' || ch == '\r' || ch == ' ')
+		return (1);
+	else
+		return (0);
+}
+
 static int	nb_sign(const char *str, int *i)
 {
 	int		nb_sign;
@@ -63,7 +72,7 @@ int			ft_atoi(const char *str)
 	result = 0;
 	sign = 0;
 	i = 0;
-	while (ft_isspace((int)str[i]))
+	while (ft_isspace_atoi((int)str[i]))
 		i++;
 	if ((sign = nb_sign(str, &i)) > 1)
 		return (0);

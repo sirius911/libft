@@ -14,8 +14,9 @@
 
 char		*ft_strtrim(char const *s, char const *set)
 {
-	size_t		min;
-	size_t		max;
+	size_t	min;
+	size_t	max;
+	char	*str;
 
 	if (!s)
 		return (NULL);
@@ -26,6 +27,12 @@ char		*ft_strtrim(char const *s, char const *set)
 	while (min < max && ft_strchr(set, s[max - 1]))
 		max--;
 	if (min == max)
-		return (ft_strnew(1));
+	{
+		str = (char *)malloc(sizeof(char) * 1);
+		if (!str)
+			return (NULL);
+		str[0] = 0;
+		return (str);
+	}
 	return (ft_substr(s, min, (max - min)));
 }
