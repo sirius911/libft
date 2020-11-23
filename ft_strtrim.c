@@ -18,7 +18,7 @@ char		*ft_strtrim(char const *s, char const *set)
 	size_t	max;
 	char	*str;
 
-	if (!s)
+	if (!s || !set)
 		return (NULL);
 	min = 0;
 	while (s[min] && ft_strchr(set, s[min]))

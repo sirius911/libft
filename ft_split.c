@@ -14,7 +14,7 @@
 
 static char		*ft_strndup_split(const char *s, size_t n)
 {
-	char	*str;
+	char		*str;
 	size_t		i;
 
 	i = 0;
@@ -49,6 +49,16 @@ static int		nb_word(char const *str, char c)
 	return (cmpt);
 }
 
+static void		free_split(char **dest, int y)
+{
+	while (y >= 0)
+	{
+		free(dest[y]);
+		y--;
+	}
+	free(dest);
+}
+
 static char		**ft_fill_words(char **dest, char const *s, char c)
 {
 	int			i;
@@ -66,16 +76,12 @@ static char		**ft_fill_words(char **dest, char const *s, char c)
 			i++;
 		if (i > j)
 		{
-			dest[y] = ft_strndup_split(s + j, i - j);
-			if (!dest[y])
+			dest[y++] = ft_strndup_split(s + j, i - j);
+			if (!dest[y - 1])
 			{
-				y--;
-				while (y >= 0)
-					free(dest[y--]);
-				free(dest);
+				free_split(dest, y - 2);
 				return (NULL);
 			}
-			y++;
 		}
 	}
 	dest[y] = NULL;
