@@ -6,7 +6,7 @@
 #    By: clorin <clorin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/15 14:40:58 by clorin            #+#    #+#              #
-#    Updated: 2020/11/30 19:04:01 by clorin           ###   ########.fr        #
+#    Updated: 2020/11/30 19:10:25 by clorin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c
 			ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c \
-			ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+			ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_isspace.c\
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_strndup.c ft_strnew.c\
 			ft_memalloc.c ft_strncpy.c ft_strcpy.c  ft_strcat.c ft_strstr.c   ft_strcmp.c \
 			ft_strncat.c ft_putchar.c ft_putstr.c ft_putnchar.c ft_isspace.c ft_memdel.c \
