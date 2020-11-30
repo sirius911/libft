@@ -6,7 +6,7 @@
 #    By: clorin <clorin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/15 14:40:58 by clorin            #+#    #+#              #
-#    Updated: 2020/11/16 11:10:02 by clorin           ###   ########.fr        #
+#    Updated: 2020/11/30 19:04:01 by clorin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME		= libft.a
 
-CC			= clang
+CC		= clang
 
 CFLAGS		= -Wall -Wextra -Werror
 
@@ -25,9 +25,8 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c
 			ft_isprint.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c \
 			ft_strlcpy.c ft_strlcat.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 			ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c 		 
-
-BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
+			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c \
+			ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c\
 			ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_strndup.c ft_strnew.c\
 			ft_memalloc.c ft_strncpy.c ft_strcpy.c  ft_strcat.c ft_strstr.c   ft_strcmp.c \
 			ft_strncat.c ft_putchar.c ft_putstr.c ft_putnchar.c ft_isspace.c ft_memdel.c \
@@ -35,8 +34,6 @@ BONUS		= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.
 			ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_lstsplit.c
 
 OBJS		= ${SRCS:.c=.o}
-
-OBJS_BONUS	= ${BONUS:.c=.o}
 
 .c.o:
 			@${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
@@ -59,22 +56,8 @@ $(NAME):	${OBJS}
 			@echo "Optimisation ... \033[32mok\033[0m"
 			@echo "\033[1;31;40m -------------- TERMINÉ ---------------\033[0m"
 
-bonus:		${OBJS} ${OBJS_BONUS}
-			@echo "----------- \033[32m Avec Bonus Terminé\033[0m -----------"
-			@echo "\n\033[32m"
-			@echo "██      ██ ██████  ███████ ████████     ██████   ██████  ███    ██ ██    ██ ███████ "
-			@echo "██      ██ ██   ██ ██         ██        ██   ██ ██    ██ ████   ██ ██    ██ ██      "
-			@echo "██      ██ ██████  █████      ██        ██████  ██    ██ ██ ██  ██ ██    ██ ███████ " 
-			@echo "██      ██ ██   ██ ██         ██        ██   ██ ██    ██ ██  ██ ██ ██    ██      ██ "
-			@echo "███████ ██ ██████  ██         ██        ██████   ██████  ██   ████  ██████  ███████ " 
-			@ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
-			@echo "\033[0m\nCréation de la librairie avec les Bonus... \033[32mok\033[0m"
-			@ranlib ${NAME}
-			@echo "Optimisation ... \033[32mok\033[0m"
-			@echo "\033[1;31;40m -------------- TERMINÉ ---------------\033[0m"
-
 clean:	
-			@rm -f ${OBJS} ${OBJS_BONUS}
+			@rm -f ${OBJS}
 			@echo "\n\033[32m"
 			@echo " ██████ ██      ███████  █████  ███    ██"
 			@echo "██      ██      ██      ██   ██ ████   ██"
