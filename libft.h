@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define MAX_FD 256
+# define BUFFER_SIZE 32
+
 typedef struct	s_list
 {
 	void			*content;
@@ -93,5 +96,6 @@ void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
 t_list			*ft_lstsplit(char const *s, char c);
-
+int				get_next_line(const int fd, char **line);
+char			*strjoin_gnl(char const *s1, char const *s2);
 #endif
