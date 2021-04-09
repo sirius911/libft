@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/15 14:45:06 by clorin            #+#    #+#             */
-/*   Updated: 2020/11/18 17:03:06 by clorin           ###   ########.fr       */
+/*   Created: 2021/03/17 15:03:31 by clorin            #+#    #+#             */
+/*   Updated: 2021/03/17 15:05:46 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *str)
+size_t			ft_intlen(long long nb)
 {
-	int			i;
+	size_t		len;
 
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	len = 0;
+	if (!nb)
+		len++;
+	while (nb)
+	{
+		nb = nb / 10;
+		len++;
+	}
+	return (len);
 }

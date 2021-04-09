@@ -6,7 +6,7 @@
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:40:34 by clorin            #+#    #+#             */
-/*   Updated: 2020/12/01 09:07:14 by clorin           ###   ########.fr       */
+/*   Updated: 2021/03/17 11:42:12 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s, char const *set);
 char			**ft_split(char const *s, char c);
+char			**ft_nsplit(char const *s, char c, int n);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_putchar_fd(char c, int fd);
@@ -98,4 +99,5 @@ char			*ft_strmap(char const *s, char (*f)(char));
 t_list			*ft_lstsplit(char const *s, char c);
 int				get_next_line(const int fd, char **line);
 char			*strjoin_gnl(char const *s1, char const *s2);
+size_t			ft_intlen(long long nb);
 #endif

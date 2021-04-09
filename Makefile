@@ -32,18 +32,18 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c
 			ft_strncat.c ft_putchar.c ft_putstr.c ft_putnchar.c ft_isspace.c ft_memdel.c \
 			ft_memdup.c ft_putnbr.c ft_putendl.c ft_strequ.c ft_strnequ.c ft_strdel.c \
 			ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_lstsplit.c \
-			get_next_line.c get_next_line_utils.c
+			get_next_line.c get_next_line_utils.c ft_intlen.c ft_nsplit.c
 
 OBJS		= ${SRCS:.c=.o}
 
 .c.o:
+			@printf "\033[0;33mGenerating libft objects... %-33.33s\r" $@
 			@${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
-			@echo "compilation : "$< "\033[32mok\033[0m"
 
 all:		${NAME}
 
 $(NAME):	${OBJS}
-			@echo "----------- \033[32mTerminé\033[0m -----------"
+			@echo "\n----------- \033[32mTerminé\033[0m -----------"
 			@echo "\n\033[32m"
 			@echo "██      ██ ██████  ███████ ████████"
 			@echo "██      ██ ██   ██ ██         ██   "
