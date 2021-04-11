@@ -17,9 +17,9 @@
 **	otherwise return 0
 */
 
-static int			nl_line(char *str)
+static int	nl_line(char *str)
 {
-	int				i;
+	int	i;
 
 	i = 0;
 	if (!str)
@@ -37,10 +37,10 @@ static int			nl_line(char *str)
 **	return a malloc string from the first line of str or str if none '\ n'
 */
 
-static char			*recup_line(char *str)
+static char	*recup_line(char *str)
 {
-	int				i;
-	char			*dest;
+	int		i;
+	char	*dest;
 
 	i = 0;
 	if (!str)
@@ -70,11 +70,11 @@ static char			*recup_line(char *str)
 **	free the old str
 */
 
-static char			*save_static(char *str)
+static char	*save_static(char *str)
 {
-	int				i;
-	int				j;
-	char			*dest;
+	int		i;
+	int		j;
+	char	*dest;
 
 	i = 0;
 	if (!str)
@@ -103,10 +103,10 @@ static char			*save_static(char *str)
 **	and free buffer if not valid inputs
 */
 
-static int			check_input(char *buffer, const int fd, char **line)
+static int	check_input(char *buffer, const int fd, char **line)
 {
-	if (fd < 0 || fd > MAX_FD || !line || BUFFER_SIZE <= 0 || !buffer ||
-	read(fd, NULL, 0) < 0)
+	if (fd < 0 || fd > MAX_FD || !line || BUFFER_SIZE <= 0 || !buffer
+		|| read(fd, NULL, 0) < 0)
 	{
 		if (buffer)
 			free(buffer);
@@ -128,7 +128,7 @@ static int			check_input(char *buffer, const int fd, char **line)
 **		we returned 0, otherwise 1 because there is still something to read.
 */
 
-int					get_next_line(const int fd, char **line)
+int	get_next_line(const int fd, char **line)
 {
 	static char		*str_static[MAX_FD];
 	char			*buffer;
@@ -152,6 +152,5 @@ int					get_next_line(const int fd, char **line)
 	free(buffer);
 	*line = recup_line(str_static[fd]);
 	str_static[fd] = save_static(str_static[fd]);
-	result = (result == 0 && ft_strlen(str_static[fd]) == 0) ? 0 : 1;
-	return (result);
+	return (result_gnl(result, ft_strlen(str_static[fd])));
 }

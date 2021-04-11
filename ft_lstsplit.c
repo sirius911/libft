@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-t_list			*ft_lstsplit(char const *s, char c)
+t_list	*ft_lstsplit(char const *s, char c)
 {
 	t_list		*dest;
 	char		**tab;
