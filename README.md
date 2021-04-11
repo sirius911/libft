@@ -1,7 +1,7 @@
 Ma Libft
 ========
 V2:
-[![norminette](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml/badge.svg)](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml)
+[![norminette](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml/badge.svg?branch=V2)](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml)
 
 V3:
 [![norminette](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml/badge.svg?branch=V3)](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml)
