@@ -1,8 +1,10 @@
 Ma Libft
 ========
 V2:
+[![norminette](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml/badge.svg?branch=V2)](https://github.com/sirius911/libft/actions/workflows/norminette%20V2.yml?branch=V2)
 
 V3:
+[![norminette](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml/badge.svg?branch=V3)](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml?branch=V3)
 
 Ce projet est également pour vous l’occasion d’étendre la liste des fonctions demandées avec les vôtres et ainsi de rendre votre bibliothèque encore plus utile. N’hésitez pas à compléter votre libft tout au long de votre scolarité une fois que ce projet ne sera plus qu’un souvenir pour vous.
 
