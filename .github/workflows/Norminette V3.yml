@@ -1,9 +1,6 @@
 # .github/workflows/norminette.yml
 name: norminette_V3
-on:
-  push:
-    branches:
-      - V3
+on: [push, pull_request]
 jobs:
 
   norminette_v3_job:
