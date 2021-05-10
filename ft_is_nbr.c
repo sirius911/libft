@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_is_nbr(const char *str)
+int	ft_is_nbr(const char *str)
 {
 	int	i;
 

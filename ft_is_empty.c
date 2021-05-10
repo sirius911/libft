@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-int			ft_is_empty(char *str)
+int	ft_is_empty(char *str)
 {
-	int				i;
+	int	i;
 
 	i = 0;
 	if (!str)

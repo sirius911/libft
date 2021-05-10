@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char			*strjoin_gnl(char const *s1, char const *s2)
+char	*strjoin_gnl(char const *s1, char const *s2)
 {
 	char		*dest;
 	int			size_s1;
@@ -35,4 +35,12 @@ char			*strjoin_gnl(char const *s1, char const *s2)
 	dest[size_total] = '\0';
 	free((char *)s1);
 	return (dest);
+}
+
+int	ft_result_gnl(int result, int len_static)
+{
+	if (result == 0 && len_static == 0)
+		return (0);
+	else
+		return (1);
 }

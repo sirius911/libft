@@ -6,7 +6,7 @@
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 11:18:39 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/18 11:21:47 by clorin           ###   ########.fr       */
+/*   Updated: 2021/05/10 11:05:05 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_isspace_atoi(int ch)
 {
-	if (ch == '\t' || ch == '\n' || ch == '\v' ||
-		ch == '\f' || ch == '\r' || ch == ' ')
+	if (ch == '\t' || ch == '\n' || ch == '\v'
+		|| ch == '\f' || ch == '\r' || ch == ' ')
 		return (1);
 	else
 		return (0);
@@ -63,7 +63,7 @@ static int	ft_toobig(int sign, int i, const char *str)
 	return (1);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long int	result;
 	int			sign;
@@ -74,9 +74,11 @@ int			ft_atoi(const char *str)
 	i = 0;
 	while (ft_isspace_atoi((int)str[i]))
 		i++;
-	if ((sign = nb_sign(str, &i)) > 1)
+	sign = nb_sign(str, &i);
+	if (sign > 1)
 		return (0);
-	if ((result = ft_toobig(sign, i, str)) == 1)
+	result = ft_toobig(sign, i, str);
+	if (result == 1)
 	{
 		result = 0;
 		while (ft_isdigit(str[i]))

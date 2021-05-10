@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-size_t			ft_intlen(long long nb)
+size_t	ft_intlen(long long nb)
 {
-	size_t		len;
+	size_t	len;
 
 	len = 0;
 	if (!nb)

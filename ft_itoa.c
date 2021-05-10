@@ -30,7 +30,7 @@ static int	ft_len_nbr(int n)
 	return (size);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		size;

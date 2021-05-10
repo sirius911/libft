@@ -22,7 +22,7 @@
 # define FALSE 0
 # define TRUE 1
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -75,8 +75,8 @@ void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *alist, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap
-				(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 char			*ft_strndup(const char *s, size_t n);
 char			*ft_strnew(size_t size);
 void			*ft_memalloc(size_t size);
@@ -104,6 +104,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
 t_list			*ft_lstsplit(char const *s, char c);
 int				get_next_line(const int fd, char **line);
+int				ft_result_gnl(int result, int len_static);
 char			*strjoin_gnl(char const *s1, char const *s2);
 size_t			ft_intlen(long long nb);
 #endif
