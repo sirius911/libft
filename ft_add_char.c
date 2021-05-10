@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_add_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/18 11:50:14 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/18 11:52:09 by clorin           ###   ########.fr       */
+/*   Created: 2021/04/13 07:54:00 by clorin            #+#    #+#             */
+/*   Updated: 2021/04/13 07:54:30 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int ch)
+char	*ft_add_char(char *str, char c)
 {
-	return (ft_isalpha(ch) || ft_isdigit(ch));
+	char	*new;
+	int		len;
+
+	len = ft_strlen(str);
+	new = ft_strnew(len + 1);
+	if (!new)
+		return (NULL);
+	ft_memcpy(new, str, len);
+	new[len] = c;
+	ft_strdel(&str);
+	return (new);
 }

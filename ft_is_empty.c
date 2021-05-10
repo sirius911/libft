@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_is_empty.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/18 11:50:14 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/18 11:52:09 by clorin           ###   ########.fr       */
+/*   Created: 2021/04/26 14:23:56 by clorin            #+#    #+#             */
+/*   Updated: 2021/04/26 14:24:01 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalnum(int ch)
+int			ft_is_empty(char *str)
 {
-	return (ft_isalpha(ch) || ft_isdigit(ch));
+	int				i;
+
+	i = 0;
+	if (!str)
+		return (TRUE);
+	while (str[i])
+	{
+		if (!ft_isspace(str[i]))
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
 }

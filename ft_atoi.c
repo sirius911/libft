@@ -14,8 +14,8 @@
 
 static int	ft_isspace_atoi(int ch)
 {
-	if (ch == '\t' || ch == '\n' || ch == '\v'
-		|| ch == '\f' || ch == '\r' || ch == ' ')
+	if (ch == '\t' || ch == '\n' || ch == '\v' ||
+		ch == '\f' || ch == '\r' || ch == ' ')
 		return (1);
 	else
 		return (0);
@@ -63,7 +63,7 @@ static int	ft_toobig(int sign, int i, const char *str)
 	return (1);
 }
 
-int	ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	long int	result;
 	int			sign;
@@ -74,11 +74,9 @@ int	ft_atoi(const char *str)
 	i = 0;
 	while (ft_isspace_atoi((int)str[i]))
 		i++;
-	sign = nb_sign(str, &i);
-	if (sign > 1)
+	if ((sign = nb_sign(str, &i)) > 1)
 		return (0);
-	result = ft_toobig(sign, i, str);
-	if (result == 1)
+	if ((result = ft_toobig(sign, i, str)) == 1)
 	{
 		result = 0;
 		while (ft_isdigit(str[i]))

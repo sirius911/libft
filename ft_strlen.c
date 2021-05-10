@@ -6,15 +6,15 @@
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:45:06 by clorin            #+#    #+#             */
-/*   Updated: 2021/04/11 14:10:48 by clorin           ###   ########.fr       */
+/*   Updated: 2020/11/18 17:03:06 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+size_t			ft_strlen(const char *str)
 {
-	int	i;
+	int			i;
 
 	if (!str)
 		return (0);
