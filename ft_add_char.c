@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_add_char.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/22 15:52:00 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/22 15:54:40 by clorin           ###   ########.fr       */
+/*   Created: 2021/04/13 07:54:00 by clorin            #+#    #+#             */
+/*   Updated: 2021/04/13 07:54:30 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s, size_t n)
+char	*ft_add_char(char *str, char c)
 {
-	char	*str;
+	char	*new;
+	int		len;
 
-	str = ft_strnew(n);
-	if (!str)
+	len = ft_strlen(str);
+	new = ft_strnew(len + 1);
+	if (!new)
 		return (NULL);
-	str = ft_strncpy(str, s, n);
-	return (str);
+	ft_memcpy(new, str, len);
+	new[len] = c;
+	ft_strdel(&str);
+	return (new);
 }

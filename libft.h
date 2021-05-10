@@ -6,7 +6,7 @@
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/15 14:40:34 by clorin            #+#    #+#             */
-/*   Updated: 2021/03/17 11:42:12 by clorin           ###   ########.fr       */
+/*   Updated: 2021/05/05 15:00:48 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,17 @@
 
 # define MAX_FD 256
 # define BUFFER_SIZE 32
+# define FALSE 0
+# define TRUE 1
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }				t_list;
 
+char			*ft_add_char(char *str, char c);
+char			*ft_add_str(char *s1, char *s2);
 void			*ft_memset(void *s, int c, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t n);
@@ -37,6 +41,7 @@ size_t			ft_strlen(const char *str);
 int				ft_isalpha(int ch);
 int				ft_isdigit(int ch);
 int				ft_isalnum(int ch);
+int				ft_is_nbr(const char *str);
 int				ft_isascii(int ch);
 int				ft_isprint(int ch);
 int				ft_toupper(int ch);
@@ -70,8 +75,8 @@ void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *alist, void (*del)(void *));
 void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
-t_list			*ft_lstmap
-				(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+					void (*del)(void *));
 char			*ft_strndup(const char *s, size_t n);
 char			*ft_strnew(size_t size);
 void			*ft_memalloc(size_t size);
@@ -85,6 +90,7 @@ void			ft_putchar(char c);
 void			ft_putstr(char *str);
 int				ft_putnchar(const char c, const int n);
 int				ft_isspace(int ch);
+int				ft_is_empty(char *str);
 void			ft_memdel(void **ap);
 void			*ft_memdup(const void *src, size_t size);
 void			ft_putnbr(int n);
@@ -98,6 +104,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
 t_list			*ft_lstsplit(char const *s, char c);
 int				get_next_line(const int fd, char **line);
+int				ft_result_gnl(int result, int len_static);
 char			*strjoin_gnl(char const *s1, char const *s2);
 size_t			ft_intlen(long long nb);
 #endif

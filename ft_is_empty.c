@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_is_empty.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clorin <clorin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/22 15:52:00 by clorin            #+#    #+#             */
-/*   Updated: 2020/09/22 15:54:40 by clorin           ###   ########.fr       */
+/*   Created: 2021/04/26 14:23:56 by clorin            #+#    #+#             */
+/*   Updated: 2021/04/26 14:24:01 by clorin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s, size_t n)
+int	ft_is_empty(char *str)
 {
-	char	*str;
+	int	i;
 
-	str = ft_strnew(n);
+	i = 0;
 	if (!str)
-		return (NULL);
-	str = ft_strncpy(str, s, n);
-	return (str);
+		return (TRUE);
+	while (str[i])
+	{
+		if (!ft_isspace(str[i]))
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
 }

@@ -6,7 +6,7 @@
 #    By: clorin <clorin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/15 14:40:58 by clorin            #+#    #+#              #
-#    Updated: 2020/11/30 19:10:25 by clorin           ###   ########.fr        #
+#    Updated: 2021/05/10 10:45:18 by clorin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,8 @@ SRCS		= ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c
 			ft_strncat.c ft_putchar.c ft_putstr.c ft_putnchar.c ft_isspace.c ft_memdel.c \
 			ft_memdup.c ft_putnbr.c ft_putendl.c ft_strequ.c ft_strnequ.c ft_strdel.c \
 			ft_strclr.c ft_striter.c ft_striteri.c ft_strmap.c ft_lstsplit.c \
-			get_next_line.c get_next_line_utils.c ft_intlen.c ft_nsplit.c
+			get_next_line.c get_next_line_utils.c ft_intlen.c ft_nsplit.c ft_add_char.c \
+			ft_add_str.c ft_is_nbr.c ft_is_empty.c
 
 OBJS		= ${SRCS:.c=.o}
 
@@ -43,19 +44,13 @@ OBJS		= ${SRCS:.c=.o}
 all:		${NAME}
 
 $(NAME):	${OBJS}
-			@echo "\n----------- \033[32mTerminé\033[0m -----------"
-			@echo "\n\033[32m"
-			@echo "██      ██ ██████  ███████ ████████"
-			@echo "██      ██ ██   ██ ██         ██   "
-			@echo "██      ██ ██████  █████      ██   " 
-			@echo "██      ██ ██   ██ ██         ██   "
-			@echo "███████ ██ ██████  ██         ██   " 
+			@echo "\033[0m\n----------- \033[32mTerminé\033[0m -----------"
 			
 			@ar rc ${NAME} ${OBJS}
-			@echo "\033[0m\nCréation de la librairie ... \033[32mok\033[0m"
+			@echo "\033[0m\nCréation de la librairie ...libft \033[32mok\033[0m"
 			@ranlib ${NAME}
 			@echo "Optimisation ... \033[32mok\033[0m"
-			@echo "\033[1;31;40m -------------- TERMINÉ ---------------\033[0m"
+			@echo "\033[1;32;40m -------------- TERMINÉ ---------------\033[0m"
 
 clean:	
 			@rm -f ${OBJS}

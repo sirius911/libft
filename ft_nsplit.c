@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int		nb_word(char const *str, char c, int nb)
+static int	nb_word(char const *str, char c, int nb)
 {
 	size_t		i;
 	int			cmpt;
@@ -34,7 +34,7 @@ static int		nb_word(char const *str, char c, int nb)
 	return (cmpt);
 }
 
-static void		free_split(char **dest, int y)
+static void	free_split(char **dest, int y)
 {
 	while (y >= 0)
 	{
@@ -44,7 +44,7 @@ static void		free_split(char **dest, int y)
 	free(dest);
 }
 
-static int		next(char const *s, int i, int n, char c)
+static int	next(char const *s, int i, int n, char c)
 {
 	if (n == 0)
 		i = ft_strlen(s);
@@ -56,7 +56,7 @@ static int		next(char const *s, int i, int n, char c)
 	return (i);
 }
 
-static char		**ft_fill_words(char **dest, char const *s, char c, int n)
+static char	**ft_fill_words(char **dest, char const *s, char c, int n)
 {
 	int			i;
 	int			y;
@@ -84,7 +84,7 @@ static char		**ft_fill_words(char **dest, char const *s, char c, int n)
 	return (dest);
 }
 
-char			**ft_nsplit(char const *s, char c, int n)
+char	**ft_nsplit(char const *s, char c, int n)
 {
 	char		**dest;
 
