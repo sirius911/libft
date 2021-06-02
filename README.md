@@ -107,3 +107,11 @@ malloc, free, write
  - [x] ft_memdup
  - [x] ft_lstsplit
  - [x] ft_putnchar
+ - [x] ft_add_char
+ - [x] ft_add_str
+ - [x] ft_atoll
+ - [x] ft_intlen
+ - [x] ft_is_empty
+ - [x] ft_is_nbr
+ - [x] ft_nsplit
+ - [x] get_next_line
