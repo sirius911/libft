@@ -4,6 +4,8 @@ Ma Libft V3
 V3:
 [![norminette](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml/badge.svg?branch=V3)](https://github.com/sirius911/libft/actions/workflows/Norminette%20V3.yml?branch=V3)
 
+[![jaeskim's 42Project Score](https://badge42.herokuapp.com/api/project/clorin/42cursus-libft)](https://github.com/JaeSeoKim/badge42)
+
 Ce projet est également pour vous l’occasion d’étendre la liste des fonctions demandées avec les vôtres et ainsi de rendre votre bibliothèque encore plus utile. N’hésitez pas à compléter votre libft tout au long de votre scolarité une fois que ce projet ne sera plus qu’un souvenir pour vous.
 
 | Nom du programme  	| libft.a   	|
